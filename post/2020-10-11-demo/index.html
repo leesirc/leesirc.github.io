@@ -215,225 +215,103 @@
         </div>
         
         <div class="post-content">
-            <h1 id="1安装hugo脚手架">1.安装hugo脚手架</h1>
+            <p>此处是摘要</p>
+<h1 id="1安装hugo脚手架">1.安装hugo脚手架</h1>
 <blockquote>
 <p><a href="https://github.com/gohugoio/hugo">https://github.com/gohugoio/hugo</a>
 <a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
 </blockquote>
 <h2 id="11-binary-install">1.1 Binary Install</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># Homebrew (macOS)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Homebrew (macOS)</span>
 brew install hugo
 
-<span style="color:#998;font-style:italic"># 验证安装</span>
+<span style="color:#75715e"># 验证安装</span>
 hugo version
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="12-advanced-install">1.2 Advanced Install</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir <span style="color:#008080">$HOME</span>/src
-<span style="color:#0086b3">cd</span> <span style="color:#008080">$HOME</span>/src
+</code></pre></div><h2 id="12-advanced-install">1.2 Advanced Install</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir $HOME/src
+cd $HOME/src
 git clone https://github.com/gohugoio/hugo.git
-<span style="color:#0086b3">cd</span> hugo
+cd hugo
 go install
 
-<span style="color:#998;font-style:italic"># 验证安装</span>
+<span style="color:#75715e"># 验证安装</span>
 hugo version
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="2初始化站点">2.初始化站点</h1>
+</code></pre></div><h1 id="2初始化站点">2.初始化站点</h1>
 <h2 id="21-初始化blog">2.1 初始化blog</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># 使用hugo创建新站点: blog</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 使用hugo创建新站点: blog</span>
 hugo new site blog
 
-<span style="color:#0086b3">cd</span> blog/
+cd blog/
 git init
-<span style="color:#998;font-style:italic"># 使用新的Hugo maupassant主题, 这款挺不错</span>
+<span style="color:#75715e"># 使用新的Hugo maupassant主题, 这款挺不错</span>
 git submodule add https://github.com/rujews/maupassant-hugo themes/maupassant
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="22-初始化设置">2.2 初始化设置</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cat &gt; config.toml <span style="color:#d14">&lt;&lt;\EOF
-</span><span style="color:#d14">baseURL = &#34;https://leesirc.github.io&#34;
-</span><span style="color:#d14">languageCode = &#34;zh-CN&#34;
-</span><span style="color:#d14">title = &#34;leesirc blog&#34;
-</span><span style="color:#d14">theme = &#34;maupassant&#34;
-</span><span style="color:#d14">
-</span><span style="color:#d14">[author]
-</span><span style="color:#d14">  name = &#34;leesirc&#34;
-</span><span style="color:#d14">
-</span><span style="color:#d14">[params]
-</span><span style="color:#d14">  author = &#34;leesirc&#34;
-</span><span style="color:#d14">  subtitle = &#34;愿世界所有的美好都善良以待&#34;
-</span><span style="color:#d14">  keywords = &#34;奔跑吧 骚年&#34;
-</span><span style="color:#d14">  description = &#34;木子李&#34;
-</span><span style="color:#d14">
-</span><span style="color:#d14"># 自定义菜单
-</span><span style="color:#d14">[menu]
-</span><span style="color:#d14">  [[menu.main]]
-</span><span style="color:#d14">    identifier = &#34;books&#34;
-</span><span style="color:#d14">    name = &#34;新书&#34;
-</span><span style="color:#d14">    url = &#34;/books/&#34;
-</span><span style="color:#d14">    weight = 2
-</span><span style="color:#d14">  [[menu.main]]
-</span><span style="color:#d14">    identifier = &#34;archives&#34;
-</span><span style="color:#d14">    name = &#34;归档&#34;
-</span><span style="color:#d14">    url = &#34;/archives/&#34;
-</span><span style="color:#d14">    weight = 3
-</span><span style="color:#d14">  [[menu.main]]
-</span><span style="color:#d14">    identifier = &#34;about&#34;
-</span><span style="color:#d14">    name = &#34;关于&#34;
-</span><span style="color:#d14">    url = &#34;/about/&#34;
-</span><span style="color:#d14">    weight = 4
-</span><span style="color:#d14">
-</span><span style="color:#d14"># 友情链接
-</span><span style="color:#d14">[[params.links]]
-</span><span style="color:#d14">  title = &#34;Android Gradle权威指南&#34;
-</span><span style="color:#d14">  name = &#34;Android Gradle权威指南&#34;
-</span><span style="color:#d14">  url = &#34;http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e&#34;
-</span><span style="color:#d14">[[params.links]]
-</span><span style="color:#d14">  title = &#34;常用开发工具CDN镜像&#34;
-</span><span style="color:#d14">  name = &#34;常用开发工具CDN镜像&#34;
-</span><span style="color:#d14">  url = &#34;http://mirrors.flysnow.org/&#34;
-</span><span style="color:#d14">EOF</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="23-发布文章">2.3 发布文章</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># 进入项目根目录</span>
+</code></pre></div><h2 id="22-初始化设置">2.2 初始化设置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cat &gt; config.toml <span style="color:#e6db74">&lt;&lt;\EOF
+</span><span style="color:#e6db74">baseURL = &#34;https://leesirc.github.io&#34;
+</span><span style="color:#e6db74">languageCode = &#34;zh-CN&#34;
+</span><span style="color:#e6db74">title = &#34;leesirc blog&#34;
+</span><span style="color:#e6db74">theme = &#34;maupassant&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">[author]
+</span><span style="color:#e6db74">  name = &#34;leesirc&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">[params]
+</span><span style="color:#e6db74">  author = &#34;leesirc&#34;
+</span><span style="color:#e6db74">  subtitle = &#34;愿世界所有的美好都善良以待&#34;
+</span><span style="color:#e6db74">  keywords = &#34;奔跑吧 骚年&#34;
+</span><span style="color:#e6db74">  description = &#34;木子李&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"># 自定义菜单
+</span><span style="color:#e6db74">[menu]
+</span><span style="color:#e6db74">  [[menu.main]]
+</span><span style="color:#e6db74">    identifier = &#34;books&#34;
+</span><span style="color:#e6db74">    name = &#34;新书&#34;
+</span><span style="color:#e6db74">    url = &#34;/books/&#34;
+</span><span style="color:#e6db74">    weight = 2
+</span><span style="color:#e6db74">  [[menu.main]]
+</span><span style="color:#e6db74">    identifier = &#34;archives&#34;
+</span><span style="color:#e6db74">    name = &#34;归档&#34;
+</span><span style="color:#e6db74">    url = &#34;/archives/&#34;
+</span><span style="color:#e6db74">    weight = 3
+</span><span style="color:#e6db74">  [[menu.main]]
+</span><span style="color:#e6db74">    identifier = &#34;about&#34;
+</span><span style="color:#e6db74">    name = &#34;关于&#34;
+</span><span style="color:#e6db74">    url = &#34;/about/&#34;
+</span><span style="color:#e6db74">    weight = 4
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"># 友情链接
+</span><span style="color:#e6db74">[[params.links]]
+</span><span style="color:#e6db74">  title = &#34;Android Gradle权威指南&#34;
+</span><span style="color:#e6db74">  name = &#34;Android Gradle权威指南&#34;
+</span><span style="color:#e6db74">  url = &#34;http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e&#34;
+</span><span style="color:#e6db74">[[params.links]]
+</span><span style="color:#e6db74">  title = &#34;常用开发工具CDN镜像&#34;
+</span><span style="color:#e6db74">  name = &#34;常用开发工具CDN镜像&#34;
+</span><span style="color:#e6db74">  url = &#34;http://mirrors.flysnow.org/&#34;
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div><h2 id="23-发布文章">2.3 发布文章</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 进入项目根目录</span>
 hugo new posts/demo.md
 
-<span style="color:#998;font-style:italic"># 本地测试, http://localhost:1313/</span>
+<span style="color:#75715e"># 本地测试, http://localhost:1313/</span>
 hugo server -D
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="3初始化github">3.初始化github</h1>
+</code></pre></div><h1 id="3初始化github">3.初始化github</h1>
 <h2 id="31-创建github仓库">3.1 创建github仓库</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># 仓库名称必须是&lt;name&gt;.github.io</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 仓库名称必须是&lt;name&gt;.github.io</span>
 此处我的仓库名称是leesirc.github.io
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="32-上传相关代码">3.2 上传相关代码</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule init
+</code></pre></div><h2 id="32-上传相关代码">3.2 上传相关代码</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule init
 git submodule update
  
 hugo --buildDrafts
-<span style="color:#0086b3">cd</span> public/
+cd public/
 git init
 git remote rm origin 
 git remote add origin https://github.com/leesirc/leesirc.github.io.git
 git add -A
-git commit -m <span style="color:#d14">&#34;init&#34;</span>
+git commit -m <span style="color:#e6db74">&#34;init&#34;</span>
 git push -u origin master
-</code></pre></td></tr></table>
-</div>
-</div>
+</code></pre></div>
         </div>
 
         
@@ -477,26 +355,7 @@ git push -u origin master
         </div>
     </article>
     
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
     
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "leesirc" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     
     
