@@ -212,9 +212,11 @@
 </ul>
 <h1 id="1概念">1.概念</h1>
 <h2 id="ipcalc">ipcalc</h2>
-<p>这个工具用来子网划分真的很爽
-ipcalc <!-- raw HTML omitted -->
-ipcalc <!-- raw HTML omitted --> -s &lt;hosts_num01&gt; &lt;hosts_num02&gt;</p>
+<p>这个工具用来子网划分真的很爽</p>
+<ul>
+<li>ipcalc <!-- raw HTML omitted --></li>
+<li>ipcalc <!-- raw HTML omitted --> -s &lt;hosts_num01&gt; &lt;hosts_num02&gt;</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> ~/ ipcalc 10.10.0.0/16
 Address:   10.10.0.0            00001010.00001010. 00000000.00000000
 Netmask:   255.255.0.0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>     11111111.11111111. 00000000.00000000
@@ -225,11 +227,13 @@ HostMin:   10.10.0.1            00001010.00001010. 00000000.00000001
 HostMax:   10.10.255.254        00001010.00001010. 11111111.11111110
 Broadcast: 10.10.255.255        00001010.00001010. 11111111.11111111
 Hosts/Net: <span style="color:#ae81ff">65534</span>                 Class A, Private Internet
-</code></pre></div><p>上面demo说明:
-网段: 10.10.0.0/16
-网络位: 255.255.0.0
-主机位: 0.0.255.255
-主机数量: 2^16 -2 ~= 65534</p>
+</code></pre></div><p>上面demo说明:</p>
+<ul>
+<li>网段: 10.10.0.0/16</li>
+<li>网络位: 255.255.0.0</li>
+<li>主机位: 0.0.255.255</li>
+<li>主机数量: 2^16 -2 ~= 65534</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> ~/ ipcalc 10.10.0.0/16 -s <span style="color:#ae81ff">100</span>
 Address:   10.10.0.0            00001010.00001010. 00000000.00000000
 Netmask:   255.255.0.0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>     11111111.11111111. 00000000.00000000
