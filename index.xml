@@ -9,38 +9,38 @@
     <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GO浪 | 第三方库 | color学习</title>
-      <link>https://leesirc.github.io/post/2020-10-12-go-thirdClass-color/</link>
+      <link>https://leesirc.github.io/2020/10/GO%E6%B5%AA-%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93-color%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://leesirc.github.io/post/2020-10-12-go-thirdClass-color/</guid>
+      <guid>https://leesirc.github.io/2020/10/GO%E6%B5%AA-%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93-color%E5%AD%A6%E4%B9%A0/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;GO浪第三方库: github.com/fatih/color&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GO浪知识点小记 | 闭包</title>
-      <link>https://leesirc.github.io/post/2020-10-12-go-note-mutex/</link>
+      <link>https://leesirc.github.io/2020/10/GO%E6%B5%AA%E7%9F%A5%E8%AF%86%E7%82%B9%E5%B0%8F%E8%AE%B0-%E9%97%AD%E5%8C%85/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://leesirc.github.io/post/2020-10-12-go-note-mutex/</guid>
+      <guid>https://leesirc.github.io/2020/10/GO%E6%B5%AA%E7%9F%A5%E8%AF%86%E7%82%B9%E5%B0%8F%E8%AE%B0-%E9%97%AD%E5%8C%85/</guid>
       <description>&lt;p&gt;闭包&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>子网掩码</title>
-      <link>https://leesirc.github.io/post/2020-10-11-ipcalc/</link>
+      <link>https://leesirc.github.io/2020/10/%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81/</link>
       <pubDate>Sun, 11 Oct 2020 12:00:00 +0800</pubDate>
       
-      <guid>https://leesirc.github.io/post/2020-10-11-ipcalc/</guid>
+      <guid>https://leesirc.github.io/2020/10/%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81/</guid>
       <description>&lt;p&gt;子网掩码划分&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>hugo-爬坑</title>
-      <link>https://leesirc.github.io/post/2020-10-11-demo/</link>
+      <link>https://leesirc.github.io/2020/10/hugo-%E7%88%AC%E5%9D%91/</link>
       <pubDate>Sun, 11 Oct 2020 09:00:00 +0800</pubDate>
       
-      <guid>https://leesirc.github.io/post/2020-10-11-demo/</guid>
+      <guid>https://leesirc.github.io/2020/10/hugo-%E7%88%AC%E5%9D%91/</guid>
       <description>&lt;p&gt;hugo-简单使用&lt;/p&gt;</description>
     </item>
     
