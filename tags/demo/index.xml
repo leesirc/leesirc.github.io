@@ -8,11 +8,11 @@
     <language>zh-CN</language>
     <lastBuildDate>Sun, 11 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>hugo-爬坑</title>
-      <link>https://leesirc.github.io/2020/10/11/hugo-%E7%88%AC%E5%9D%91/</link>
+      <title>hugo爬坑</title>
+      <link>https://leesirc.github.io/post/demo-series/01-hugo/</link>
       <pubDate>Sun, 11 Oct 2020 09:00:00 +0800</pubDate>
       
-      <guid>https://leesirc.github.io/2020/10/11/hugo-%E7%88%AC%E5%9D%91/</guid>
+      <guid>https://leesirc.github.io/post/demo-series/01-hugo/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;hugo-简单使用&lt;/p&gt;</description>
     </item>
