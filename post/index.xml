@@ -8,22 +8,22 @@
     <language>zh-CN</language>
     <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>GO浪 | 第三方库 | color学习</title>
+      <link>https://leesirc.github.io/post/2020-10-12-go-thirdClass-color/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/2020-10-12-go-thirdClass-color/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;GO浪第三方库: github.com/fatih/color&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>GO浪知识点小记 | 闭包</title>
       <link>https://leesirc.github.io/post/2020-10-12-go-note-mutex/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0800</pubDate>
       
       <guid>https://leesirc.github.io/post/2020-10-12-go-note-mutex/</guid>
       <description>&lt;p&gt;闭包&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>GO浪 | 第三方库 | color学习</title>
-      <link>https://leesirc.github.io/post/2020-10-12-go-thirdClass-color/</link>
-      <pubDate>Sun, 11 Oct 2020 12:00:00 +0800</pubDate>
-      
-      <guid>https://leesirc.github.io/post/2020-10-12-go-thirdClass-color/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;GO浪第三方库: github.com/fatih/color&lt;/p&gt;</description>
     </item>
     
     <item>
