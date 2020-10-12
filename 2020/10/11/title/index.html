@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>关于我 | leesirc blog</title>
-    <meta property="og:title" content="关于我 - leesirc blog">
+    <title>子网掩码 | leesirc blog</title>
+    <meta property="og:title" content="子网掩码 - leesirc blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-10-11T00:00:00&#43;08:00'>
+    <meta property="article:published_time" content='2020-10-11T12:00:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-10-11T00:00:00&#43;08:00'>
+    <meta property="article:modified_time" content='2020-10-11T12:00:00&#43;08:00'>
         
     <meta name="Keywords" content="leesirc">
-    <meta name="description" content="运维小白一枚 go浪爱好者">
+    <meta name="description" content="子网掩码">
         
     <meta name="author" content="leesirc">
-    <meta property="og:url" content="https://leesirc.github.io/about/">
+    <meta property="og:url" content="https://leesirc.github.io/2020/10/11/title/">
     <link rel="shortcut icon" href='/favicon.ico/'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -51,13 +51,13 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://leesirc.github.io">首页</a>
+                    <a class="current" href="https://leesirc.github.io">首页</a>
                     
                     <a  href="https://leesirc.github.io/tools/" title="工具">工具</a>
                     
                     <a  href="https://leesirc.github.io/archives/" title="归档">归档</a>
                     
-                    <a class="current" href="https://leesirc.github.io/about/" title="关于">关于</a>
+                    <a  href="https://leesirc.github.io/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -136,7 +136,16 @@
 <div class="post-toc" style="position: absolute; top: 188px;">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ipcalc">ipcalc</a></li>
+    <li><a href="#子网掩码概念">子网掩码概念</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#根据主机数">根据主机数</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 <script type="text/javascript">
@@ -168,11 +177,18 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">关于我</h1>
+            <h1 class="post-title">子网掩码</h1>
         </header>
         <date class="post-meta meta-date">
             2020年10月11日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E7%BD%91%E7%BB%9C'>网络</a></span>
+            
+        </div>
         
         
         <div class="post-meta">
@@ -181,24 +197,124 @@
         </div>
         
         
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
         <div class="post-content">
-            <ul>
-<li>运维小白一枚</li>
-<li>go浪爱好者</li>
-<li>建站时间: 2020-10-11</li>
-<li>邮箱: <a href="mailto:leesirc@126.com">leesirc@126.com</a></li>
+            <p>子网掩码划分</p>
+<p>今天在使用ipcalc工具给业务划分vpc时, 突然蒙蔽了, 对具体的子网掩码划分概念太模糊了, 果然出来混迟早需要还的, 主要有以下疑问点:</p>
+<ul>
+<li>如何根据主机数量进行划分子网</li>
+<li>如何根据现有的子网划分再接着划分新的子网</li>
 </ul>
-<p>
-    
-    
-        <a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/leesirc/leesirc.github.io/about/leesirc.jpg">
-            <img class="mx-auto" alt="leesirc" src="https://cdn.jsdelivr.net/gh/leesirc/leesirc.github.io/about/leesirc.jpg" />
-        </a>
-    </p>
+<h1 id="1概念">1.概念</h1>
+<h2 id="ipcalc">ipcalc</h2>
+<p>这个工具用来子网划分真的很爽</p>
+<ul>
+<li>ipcalc <!-- raw HTML omitted --></li>
+<li>ipcalc <!-- raw HTML omitted --> -s &lt;hosts_num01&gt; &lt;hosts_num02&gt;</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> ~/ ipcalc 10.10.0.0/16
+Address:   10.10.0.0            00001010.00001010. 00000000.00000000
+Netmask:   255.255.0.0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>     11111111.11111111. 00000000.00000000
+Wildcard:  0.0.255.255          00000000.00000000. 11111111.11111111
+<span style="color:#f92672">=</span>&gt;
+Network:   10.10.0.0/16         00001010.00001010. 00000000.00000000
+HostMin:   10.10.0.1            00001010.00001010. 00000000.00000001
+HostMax:   10.10.255.254        00001010.00001010. 11111111.11111110
+Broadcast: 10.10.255.255        00001010.00001010. 11111111.11111111
+Hosts/Net: <span style="color:#ae81ff">65534</span>                 Class A, Private Internet
+</code></pre></div><p>上面demo说明:</p>
+<ul>
+<li>网段: 10.10.0.0/16</li>
+<li>网络位: 255.255.0.0</li>
+<li>主机位: 0.0.255.255</li>
+<li>主机数量: 2^16 -2 ~= 65534</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> ~/ ipcalc 10.10.0.0/16 -s <span style="color:#ae81ff">100</span>
+Address:   10.10.0.0            00001010.00001010. 00000000.00000000
+Netmask:   255.255.0.0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>     11111111.11111111. 00000000.00000000
+Wildcard:  0.0.255.255          00000000.00000000. 11111111.11111111
+<span style="color:#f92672">=</span>&gt;
+Network:   10.10.0.0/16         00001010.00001010. 00000000.00000000
+HostMin:   10.10.0.1            00001010.00001010. 00000000.00000001
+HostMax:   10.10.255.254        00001010.00001010. 11111111.11111110
+Broadcast: 10.10.255.255        00001010.00001010. 11111111.11111111
+Hosts/Net: <span style="color:#ae81ff">65534</span>                 Class A, Private Internet
 
+1. Requested size: <span style="color:#ae81ff">100</span> hosts
+Netmask:   255.255.255.128 <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span> 11111111.11111111.11111111.1 <span style="color:#ae81ff">0000000</span>
+Network:   10.10.0.0/25         00001010.00001010.00000000.0 <span style="color:#ae81ff">0000000</span>
+HostMin:   10.10.0.1            00001010.00001010.00000000.0 <span style="color:#ae81ff">0000001</span>
+HostMax:   10.10.0.126          00001010.00001010.00000000.0 <span style="color:#ae81ff">1111110</span>
+Broadcast: 10.10.0.127          00001010.00001010.00000000.0 <span style="color:#ae81ff">1111111</span>
+Hosts/Net: <span style="color:#ae81ff">126</span>                   Class A, Private Internet
+
+Needed size:  <span style="color:#ae81ff">128</span> addresses.
+Used network: 10.10.0.0/25
+Unused:
+10.10.0.128/25
+10.10.1.0/24
+10.10.2.0/23
+10.10.4.0/22
+10.10.8.0/21
+10.10.16.0/20
+10.10.32.0/19
+10.10.64.0/18
+10.10.128.0/17
+</code></pre></div><p>上面demo说明:</p>
+<ol>
+<li>将网络10.10.0.0/16 进行子网划分出一个子网, 根据主机数量为100进行划分, 由上面图例可以知道: ipcalc 工具是根据最小主机数量进行划分的, 最小为2^7, 因为主机位数为7, 网络位数为25, 即 最小的子网为 10.10.0.0/25</li>
+<li>又因为网络10.10.0.0/16 为16位掩码, 因为网络位就剩下9位, 因为也就有了2^9 -1 == 516这样的子网, 且掩码都是25位的, 每个小的子网的空闲网络位逐次递增即可</li>
+<li>若每个子网承载主机数量为100, 那我们轻松知道, 按照25位掩码分即可:
+10.10.0.0/25
+10.10.0.128/25
+10.10.1.0/25
+10.10.1.128/25</li>
+</ol>
+<p>可以通过 ~/ ipcalc 10.10.0.0/16 -s 100 100 100 100 进行验证上述答案</p>
+<h2 id="子网掩码概念">子网掩码概念</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 摘抄自百科</span>
+子网掩码不能单独存在，它必须结合IP地址一起使用。子网掩码只有一个作用，就是将某个IP地址划分成网络地址和主机地址两部分
+
+通过计算机的子网掩码判断两台计算机是否属于同一网段的方法是，将计算机十进制的IP地址和子网掩码转换为二进制的形式，然后进行二进制“与”<span style="color:#f92672">(</span>AND<span style="color:#f92672">)</span>计算（全1则得1，不全1则得0），如果得出的结果是相同的，那么这两台计算机就属于同一网段
+</code></pre></div><h1 id="2原理">2.原理</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">网络位</span>: <span style="color:#ae81ff">掩码与IP地址进行AND运算</span>
+<span style="color:#f92672">主机位</span>: <span style="color:#ae81ff">掩码取反后, 与IP地址进行AND运算</span>
+
+</code></pre></div><h1 id="3应用">3.应用</h1>
+<h2 id="根据主机数">根据主机数</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 摘抄自百科</span>
+根据主机数
+利用主机数来计算
+1<span style="color:#f92672">)</span>将主机数目转化为二进制来表示
+2<span style="color:#f92672">)</span>如果主机数小于或等于254（注意去掉保留的两个IP地址），则取得该主机的二进制位数，为 N，这里肯定N&lt;8。如果大于254，则 N&gt;8，这就是说主机地址将占据不止8位。
+3<span style="color:#f92672">)</span>使用255.255.255.255来将该类IP地址的主机地址位数全部置1，然后从后向前的将N位全部置为 0，即为子网掩码值。
+如欲将B类IP地址168.195.0.0划分成若干子网，每个子网内有主机700台：
+1<span style="color:#f92672">)</span> 700<span style="color:#f92672">=</span><span style="color:#ae81ff">1010111100</span>
+2<span style="color:#f92672">)</span>该二进制为十位数，N <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+3<span style="color:#f92672">)</span>将该B类地址的子网掩码255.255.0.0的主机地址全部置1，得到255.255.255.255
+然后再从后向前将后10位置0，即为： 11111111.11111111.11111100.00000000
+即255.255.252.0。这就是该欲划分成主机为700台的B类IP地址168.195.0.0的子网掩码
+
+<span style="color:#75715e"># 总而言之</span>
+给一个主机承载数量, 先算出2^N次方的最小N数, 这个N就是主机位
+</code></pre></div>
         </div>
 
         
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://leesirc.github.io">leesirc</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://leesirc.github.io/2020/10/11/title/">https://leesirc.github.io/2020/10/11/title/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
 
 
         
@@ -206,6 +322,10 @@
 <div class="post-archive">
     <h2>See Also</h2>
     <ul class="listing">
+        
+        <li><a href="/2020/10/11/title/">hugo-爬坑</a></li>
+        
+        <li><a href="/about/">关于我</a></li>
         
         <li><a href="/archives/">归档</a></li>
         
@@ -217,7 +337,11 @@
 
         <div class="post-meta meta-tags">
             
-            没有标签
+            <ul class="clearfix">
+                
+                <li><a href='/tags/%E7%BD%91%E7%BB%9C'>网络</a></li>
+                
+            </ul>
             
         </div>
     </article>
