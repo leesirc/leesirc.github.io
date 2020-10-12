@@ -138,19 +138,27 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#11-binary-install">1.1 Binary Install</a></li>
-    <li><a href="#12-advanced-install">1.2 Advanced Install</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#21-初始化blog">2.1 初始化blog</a></li>
-    <li><a href="#22-初始化设置">2.2 初始化设置</a></li>
-    <li><a href="#23-发布文章">2.3 发布文章</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#31-创建github仓库">3.1 创建github仓库</a></li>
-    <li><a href="#32-上传相关代码">3.2 上传相关代码</a></li>
+    <li><a href="#1安装hugo脚手架">1.安装hugo脚手架</a>
+      <ul>
+        <li><a href="#11-binary-install">1.1 Binary Install</a></li>
+        <li><a href="#12-advanced-install">1.2 Advanced Install</a></li>
+      </ul>
+    </li>
+    <li><a href="#2初始化站点">2.初始化站点</a>
+      <ul>
+        <li><a href="#21-初始化blog">2.1 初始化blog</a></li>
+        <li><a href="#22-初始化设置">2.2 初始化设置</a></li>
+        <li><a href="#23-发布文章">2.3 发布文章</a></li>
+      </ul>
+    </li>
+    <li><a href="#3初始化github">3.初始化github</a>
+      <ul>
+        <li><a href="#31-创建github仓库">3.1 创建github仓库</a></li>
+        <li><a href="#32-上传相关代码">3.2 上传相关代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#4文章更新">4.文章更新</a></li>
+    <li><a href="#参考链接">参考链接</a></li>
   </ul>
 </nav>
     </div>
@@ -211,20 +219,21 @@
         </div>
         
         <div class="post-content">
-            <p>hugo-简单使用</p>
-<h1 id="1安装hugo脚手架">1.安装hugo脚手架</h1>
+            <!-- raw HTML omitted -->
+<p>hugo-简单使用</p>
+<h2 id="1安装hugo脚手架">1.安装hugo脚手架</h2>
 <blockquote>
 <p>更多安装请参考:</p>
 <p><a href="https://github.com/gohugoio/hugo">https://github.com/gohugoio/hugo</a></p>
 <p><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
 </blockquote>
-<h2 id="11-binary-install">1.1 Binary Install</h2>
+<h3 id="11-binary-install">1.1 Binary Install</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Homebrew (macOS)</span>
 brew install hugo
 
 <span style="color:#75715e"># 验证安装</span>
 hugo version
-</code></pre></div><h2 id="12-advanced-install">1.2 Advanced Install</h2>
+</code></pre></div><h3 id="12-advanced-install">1.2 Advanced Install</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir $HOME/src
 cd $HOME/src
 git clone https://github.com/gohugoio/hugo.git
@@ -233,8 +242,8 @@ go install
 
 <span style="color:#75715e"># 验证安装</span>
 hugo version
-</code></pre></div><h1 id="2初始化站点">2.初始化站点</h1>
-<h2 id="21-初始化blog">2.1 初始化blog</h2>
+</code></pre></div><h2 id="2初始化站点">2.初始化站点</h2>
+<h3 id="21-初始化blog">2.1 初始化blog</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 使用hugo脚手架创建新站点, 此处我的站点名称为blog</span>
 hugo new site blog
 
@@ -242,22 +251,22 @@ cd blog/
 git init
 <span style="color:#75715e"># 使用新的Hugo maupassant主题, 这款真心不错, 强烈推荐哦</span>
 git submodule add https://github.com/rujews/maupassant-hugo themes/maupassant
-</code></pre></div><h2 id="22-初始化设置">2.2 初始化设置</h2>
+</code></pre></div><h3 id="22-初始化设置">2.2 初始化设置</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 主题的更多设置请参考下面的github地址</span>
 <span style="color:#75715e"># 每款主题都有demo, 请详细查看哈</span>
 https://github.com/flysnow-org/maupassant-hugo
-</code></pre></div><h2 id="23-发布文章">2.3 发布文章</h2>
+</code></pre></div><h3 id="23-发布文章">2.3 发布文章</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 进入站点根目录</span>
 hugo new posts/demo.md
 
 <span style="color:#75715e"># 本地测试, http://localhost:1313/</span>
 hugo server -D
-</code></pre></div><h1 id="3初始化github">3.初始化github</h1>
-<h2 id="31-创建github仓库">3.1 创建github仓库</h2>
+</code></pre></div><h2 id="3初始化github">3.初始化github</h2>
+<h3 id="31-创建github仓库">3.1 创建github仓库</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
 <span style="color:#75715e"># 仓库名称必须是&lt;name&gt;.github.io</span>
 此处我的仓库名称是leesirc.github.io
-</code></pre></div><h2 id="32-上传相关代码">3.2 上传相关代码</h2>
+</code></pre></div><h3 id="32-上传相关代码">3.2 上传相关代码</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule init
 git submodule update
  
@@ -269,7 +278,7 @@ git remote add origin https://github.com/leesirc/leesirc.github.io.git
 git add -A
 git commit -m <span style="color:#e6db74">&#34;init&#34;</span>
 git push -u origin master
-</code></pre></div><h1 id="4文章更新">4.文章更新</h1>
+</code></pre></div><h2 id="4文章更新">4.文章更新</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1.本地预览测试</span>
 cd &lt;站点根目录&gt;
 hugo server -D
@@ -280,7 +289,7 @@ hugo -D
 cd public
 git add . <span style="color:#f92672">&amp;&amp;</span> git commit -m <span style="color:#e6db74">&#39;update site&#39;</span> <span style="color:#f92672">&amp;&amp;</span> git push -v
 
-</code></pre></div><h1 id="参考链接">参考链接</h1>
+</code></pre></div><h2 id="参考链接">参考链接</h2>
 <ul>
 <li><a href="https://github.com/flysnow-org/maupassant-hugo">https://github.com/flysnow-org/maupassant-hugo</a></li>
 <li><a href="https://olowolo.com/post/hugo-quick-start/">https://olowolo.com/post/hugo-quick-start/</a></li>

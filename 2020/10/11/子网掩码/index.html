@@ -138,12 +138,18 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#ipcalc">ipcalc</a></li>
-    <li><a href="#子网掩码概念">子网掩码概念</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#根据主机数">根据主机数</a></li>
+    <li><a href="#1概念">1.概念</a>
+      <ul>
+        <li><a href="#ipcalc">ipcalc</a></li>
+        <li><a href="#子网掩码概念">子网掩码概念</a></li>
+      </ul>
+    </li>
+    <li><a href="#2原理">2.原理</a></li>
+    <li><a href="#3应用">3.应用</a>
+      <ul>
+        <li><a href="#根据主机数">根据主机数</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -204,14 +210,15 @@
         </div>
         
         <div class="post-content">
-            <p>子网掩码划分</p>
+            <!-- raw HTML omitted -->
+<p>子网掩码划分</p>
 <p>今天在使用ipcalc工具给业务划分vpc时, 突然蒙蔽了, 对具体的子网掩码划分概念太模糊了, 果然出来混迟早需要还的, 主要有以下疑问点:</p>
 <ul>
 <li>如何根据主机数量进行划分子网</li>
 <li>如何根据现有的子网划分再接着划分新的子网</li>
 </ul>
-<h1 id="1概念">1.概念</h1>
-<h2 id="ipcalc">ipcalc</h2>
+<h2 id="1概念">1.概念</h2>
+<h3 id="ipcalc">ipcalc</h3>
 <p>这个工具用来子网划分真的很爽</p>
 <ul>
 <li>ipcalc <!-- raw HTML omitted --></li>
@@ -276,17 +283,17 @@ Unused:
 10.10.1.128/25</li>
 </ol>
 <p>可以通过 ~/ ipcalc 10.10.0.0/16 -s 100 100 100 100 进行验证上述答案</p>
-<h2 id="子网掩码概念">子网掩码概念</h2>
+<h3 id="子网掩码概念">子网掩码概念</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 摘抄自百科</span>
 子网掩码不能单独存在，它必须结合IP地址一起使用。子网掩码只有一个作用，就是将某个IP地址划分成网络地址和主机地址两部分
 
 通过计算机的子网掩码判断两台计算机是否属于同一网段的方法是，将计算机十进制的IP地址和子网掩码转换为二进制的形式，然后进行二进制“与”<span style="color:#f92672">(</span>AND<span style="color:#f92672">)</span>计算（全1则得1，不全1则得0），如果得出的结果是相同的，那么这两台计算机就属于同一网段
-</code></pre></div><h1 id="2原理">2.原理</h1>
+</code></pre></div><h2 id="2原理">2.原理</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">网络位</span>: <span style="color:#ae81ff">掩码与IP地址进行AND运算</span>
 <span style="color:#f92672">主机位</span>: <span style="color:#ae81ff">掩码取反后, 与IP地址进行AND运算</span>
 
-</code></pre></div><h1 id="3应用">3.应用</h1>
-<h2 id="根据主机数">根据主机数</h2>
+</code></pre></div><h2 id="3应用">3.应用</h2>
+<h3 id="根据主机数">根据主机数</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 摘抄自百科</span>
 根据主机数
 利用主机数来计算
