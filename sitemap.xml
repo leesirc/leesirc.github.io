@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://leesirc.github.io/post/daily-series/</loc>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://leesirc.github.io/categories/</loc>
-    <lastmod>2020-10-12T00:00:00+08:00</lastmod>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/tags/daily/</loc>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/daily-series/01-git/</loc>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/</loc>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/</loc>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/tags/</loc>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
   </url>
   
   <url>
@@ -29,16 +64,6 @@
   
   <url>
     <loc>https://leesirc.github.io/post/go-series/go-study-third-framework/01-go-color/</loc>
-    <lastmod>2020-10-12T00:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/</loc>
-    <lastmod>2020-10-12T00:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/tags/</loc>
     <lastmod>2020-10-12T00:00:00+08:00</lastmod>
   </url>
   
@@ -83,17 +108,8 @@
   </url>
   
   <url>
-    <loc>https://leesirc.github.io/post/</loc>
-    <lastmod>2020-10-11T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://leesirc.github.io/about/</loc>
     <lastmod>2020-10-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/post/daily/</loc>
   </url>
   
   <url>
