@@ -6,7 +6,17 @@
     <description>Recent content on leesirc blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Oct 2020 12:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux 资源显示器</title>
+      <link>https://leesirc.github.io/post/sys-series/overview/01-bpytop/</link>
+      <pubDate>Tue, 13 Oct 2020 12:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/sys-series/overview/01-bpytop/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Resource monitor that shows usage and stats for processor, memory, disks, network and processes.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>阿里云数据湖</title>
       <link>https://leesirc.github.io/post/aliyun-series/datalake/01-dla/</link>
