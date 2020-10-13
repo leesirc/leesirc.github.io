@@ -28,6 +28,16 @@
     </item>
     
     <item>
+      <title>GO浪知识点小记 | new 与 make</title>
+      <link>https://leesirc.github.io/post/go-series/go-study-notes/02-go-new-make/</link>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/go-series/go-study-notes/02-go-new-make/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;new 与 make&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>git小记</title>
       <link>https://leesirc.github.io/post/daily-series/01-git/</link>
       <pubDate>Mon, 12 Oct 2020 09:00:00 +0800</pubDate>
@@ -82,7 +92,7 @@
       <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://leesirc.github.io/about/</guid>
-      <description>关于我 运维小白一枚 Go冲浪者 邮箱: leesirc@126.com 关于本站 记录工作点点滴滴 若有侵权, 请告知删除 建站时间: 2020-10-11 Life is short, you need Go</description>
+      <description>关于我 运维小白一枚 Go冲浪者 邮箱: leesirc@126.com 关于本站 记录工作点点滴滴 若有侵权, 请告知删除 建站时间: 2020-10-11 Life is short, You need Go</description>
     </item>
     
     <item>
