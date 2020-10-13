@@ -9,15 +9,14 @@
     <item>
       <title>GO浪知识点小记 | new 与 make</title>
       <link>https://leesirc.github.io/post/go-series/go-study-notes/02-go-new-make/</link>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 +0800</pubDate>
+      <pubDate>Tue, 13 Oct 2020 08:00:00 +0800</pubDate>
       
       <guid>https://leesirc.github.io/post/go-series/go-study-notes/02-go-new-make/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;new 与 make&lt;/p&gt;</description>
+      <description>&lt;p&gt;new 与 make&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>GO浪知识点小记 | 闭包</title>
+      <title>GO浪知识点小记 | 互斥锁与读写锁</title>
       <link>https://leesirc.github.io/post/go-series/go-study-notes/01-go-mutex/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0800</pubDate>
       
