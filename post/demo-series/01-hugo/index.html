@@ -149,6 +149,7 @@
         <li><a href="#21-初始化blog">2.1 初始化blog</a></li>
         <li><a href="#22-初始化设置">2.2 初始化设置</a></li>
         <li><a href="#23-发布文章">2.3 发布文章</a></li>
+        <li><a href="#24-常用配置">2.4 常用配置</a></li>
       </ul>
     </li>
     <li><a href="#3初始化github">3.初始化github</a>
@@ -262,6 +263,42 @@ hugo new posts/demo.md
 
 <span style="color:#75715e"># 本地测试, http://localhost:1313/</span>
 hugo server -D
+</code></pre></div><h3 id="24-常用配置">2.4 常用配置</h3>
+<h4 id="front-matter">Front Matter</h4>
+<p>markdown 文件开头的 &mdash; 内的内容称为 Front Matter，用于文章生成的一些控制，Hugo 支持TOML、YAML、JSON格式的Front Matter，下面节选些常用的配置：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">
+---
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;文章标题&#34;</span>
+<span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;文章的描述信息&#34;</span>
+<span style="color:#75715e"># 建议对标签的理解为：文章所涉及到的技术、内容点，越多越好</span>
+<span style="color:#f92672">tags</span>: [ <span style="color:#e6db74">&#34;标签1&#34;</span>, <span style="color:#e6db74">&#34;标签2&#34;</span>]
+<span style="color:#75715e"># 建议对目录的理解为：文章所属的系列，越少越好</span>
+<span style="color:#f92672">categories</span>: [ <span style="color:#e6db74">&#34;分类1&#34;</span>, <span style="color:#e6db74">&#34;分类2&#34;</span> ]
+<span style="color:#75715e"># 关键词用于 HTML head 的 keyword</span>
+<span style="color:#f92672">keywords</span>: [ <span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;blog&#34;</span> ]
+<span style="color:#f92672">date</span>: <span style="color:#e6db74">2019-01-01</span>
+<span style="color:#f92672">lastmod</span>: <span style="color:#ae81ff">2019-1-1</span>
+<span style="color:#75715e"># CJKLanguage: Chinese, Japanese, Korean</span>
+<span style="color:#f92672">isCJKLanguage</span>: <span style="color:#66d9ef">true</span>
+
+<span style="color:#75715e"># 如果draft为true，除非使用 --buildDrafts 参数，否则不会发布文章</span>
+<span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+
+<span style="color:#75715e"># 设置文章的过期时间，已过期的文章不会发布，除非使用 --buildExpired 参数</span>
+<span style="color:#f92672">expiryDate</span>: <span style="color:#e6db74">2020-01-01</span>
+
+<span style="color:#75715e"># 设置文章的发布时间，未来的文章不会发布，除非使用 --buildFuture 参数</span>
+<span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2020-01-01</span>
+
+<span style="color:#75715e"># 文章排序权重</span>
+<span style="color:#f92672">weight</span>: <span style="color:#ae81ff">40</span>
+
+<span style="color:#75715e"># 还有些有些第三方自定义的</span>
+<span style="color:#f92672">comment</span>: <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">hiddenFromHomePage</span>: <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">contentCopyright</span>: <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">reward</span>: <span style="color:#66d9ef">false</span>
+---
 </code></pre></div><h2 id="3初始化github">3.初始化github</h2>
 <h3 id="31-创建github仓库">3.1 创建github仓库</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
