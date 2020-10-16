@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on leesirc blog</title>
+    <link>https://leesirc.github.io/categories/Jenkins/</link>
+    <description>Recent content in Jenkins on leesirc blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 16 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/categories/Jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jks | role</title>
+      <link>https://leesirc.github.io/post/jks-series/01-role/</link>
+      <pubDate>Fri, 16 Oct 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/jks-series/01-role/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Jenkins role&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

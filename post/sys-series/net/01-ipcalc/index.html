@@ -275,7 +275,7 @@ Unused:
 </code></pre></div><p>上面demo说明:</p>
 <ol>
 <li>将网络10.10.0.0/16 进行子网划分出一个子网, 根据主机数量为100进行划分, 由上面图例可以知道: ipcalc 工具是根据最小主机数量进行划分的, 最小为2^7, 因为主机位数为7, 网络位数为25, 即 最小的子网为 10.10.0.0/25</li>
-<li>又因为网络10.10.0.0/16 为16位掩码, 因为网络位就剩下9位, 因为也就有了2^9 -1 == 516这样的子网, 且掩码都是25位的, 每个小的子网的空闲网络位逐次递增即可</li>
+<li>又因为网络10.10.0.0/16 为16位掩码, 因为网络位就剩下9位, 因为也就有了2^9 -1 == 516这样的子网, 且掩码都是25位的, 每个小的子网的空闲网络位逐次递增即可, 而又因为主机位为7为，因此相同的主机数相差为128, 每次都加128</li>
 <li>若每个子网承载主机数量为100, 那我们轻松知道, 按照25位掩码分即可:
 10.10.0.0/25
 10.10.0.128/25
@@ -442,6 +442,18 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://leesirc.github.io/post/jks-series/01-role/" title="jks | role">jks | role</a>
+    </li>
+    
+    <li>
+        <a href="https://leesirc.github.io/post/ngx-series/02-url-cut/" title="ngx | 路由截取">ngx | 路由截取</a>
+    </li>
+    
+    <li>
+        <a href="https://leesirc.github.io/post/ngx-series/01-url-redirect/" title="ngx | 路由跳转">ngx | 路由跳转</a>
+    </li>
+    
+    <li>
         <a href="https://leesirc.github.io/post/sys-series/overview/01-bpytop/" title="linux 资源显示器">linux 资源显示器</a>
     </li>
     
@@ -450,7 +462,7 @@ if (!doNotTrack) {
     </li>
     
     <li>
-        <a href="https://leesirc.github.io/post/go-series/go-study-notes/02-go-new-make/" title="GO浪知识点小记 | new 与 make">GO浪知识点小记 | new 与 make</a>
+        <a href="https://leesirc.github.io/post/go-series/go-study-notes/02-go-new-make/" title="GO浪知识点小记 | new与make">GO浪知识点小记 | new与make</a>
     </li>
     
     <li>
@@ -469,10 +481,6 @@ if (!doNotTrack) {
         <a href="https://leesirc.github.io/post/sys-series/net/01-ipcalc/" title="子网掩码">子网掩码</a>
     </li>
     
-    <li>
-        <a href="https://leesirc.github.io/post/demo-series/01-hugo/" title="hugo爬坑">hugo爬坑</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -486,7 +494,11 @@ if (!doNotTrack) {
     
     <li><a href="https://leesirc.github.io/categories/GO%E6%B5%AA%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">GO浪第三方库 (1)</a></li>
     
+    <li><a href="https://leesirc.github.io/categories/Jenkins/">Jenkins (1)</a></li>
+    
     <li><a href="https://leesirc.github.io/categories/demo/">demo (1)</a></li>
+    
+    <li><a href="https://leesirc.github.io/categories/ngx/">ngx (2)</a></li>
     
     <li><a href="https://leesirc.github.io/categories/%E6%97%A5%E5%B8%B8/">日常 (1)</a></li>
     
@@ -511,7 +523,11 @@ if (!doNotTrack) {
     
     <a href="https://leesirc.github.io/tags/golang-notes/">golang-notes</a>
     
+    <a href="https://leesirc.github.io/tags/jks/">jks</a>
+    
     <a href="https://leesirc.github.io/tags/net/">net</a>
+    
+    <a href="https://leesirc.github.io/tags/ngx/">ngx</a>
     
     <a href="https://leesirc.github.io/tags/sys/">sys</a>
     

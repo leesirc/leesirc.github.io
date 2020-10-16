@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ngx on leesirc blog</title>
+    <link>https://leesirc.github.io/categories/ngx/</link>
+    <description>Recent content in ngx on leesirc blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 16 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/categories/ngx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ngx | 路由截取</title>
+      <link>https://leesirc.github.io/post/ngx-series/02-url-cut/</link>
+      <pubDate>Fri, 16 Oct 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/ngx-series/02-url-cut/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;ngx url location&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ngx | 路由跳转</title>
+      <link>https://leesirc.github.io/post/ngx-series/01-url-redirect/</link>
+      <pubDate>Fri, 16 Oct 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/ngx-series/01-url-redirect/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;ngx url重定向实践&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
