@@ -138,6 +138,8 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
+    <li><a href="#alias">alias</a></li>
+    <li><a href="#try_files">try_files</a></li>
     <li><a href="#proxy_pass">proxy_pass</a></li>
     <li><a href="#参考链接">参考链接</a></li>
   </ul>
@@ -202,7 +204,28 @@
         <div class="post-content">
             <!-- raw HTML omitted -->
 <p>ngx url location</p>
-<h2 id="proxy_pass">proxy_pass</h2>
+<h2 id="alias">alias</h2>
+<blockquote>
+<p>alias path 最后必须/
+aias 指令则会截断匹配的 uri，然后使用 alias 设定的路径加上剩余的 uri 作为子路径进行查找</p>
+</blockquote>
+<h2 id="try_files">try_files</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">一般针对root path 或者 alias path进行应用，比如前端单页应用。/login ---&gt;/index.html
+<span style="color:#75715e">## /index.html 针对的是root path</span>
+try_files $uri $uri/ /index.html;
+index index.html index.htm;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root /data/leesirc;
+location /a <span style="color:#f92672">{</span> 
+  alias /data/web/;
+  try_files $uri $uri/ /index.html;
+  index index.html index.htm;
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># ps: /index.html 是root path</span>
+需求:
+/a ---&gt;若存在,则/data/web/a
+   ---&gt;若不存在,则/data/leesirc/index.html
+</code></pre></div><h2 id="proxy_pass">proxy_pass</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">location / <span style="color:#f92672">{</span>
     proxy_pass http://example.com:80/api
 <span style="color:#f92672">}</span>
