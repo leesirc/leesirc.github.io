@@ -6,7 +6,17 @@
     <description>Recent content on leesirc blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Oct 2020 12:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>域名解析</title>
+      <link>https://leesirc.github.io/post/sys-series/net/02-dns/</link>
+      <pubDate>Fri, 16 Oct 2020 12:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/sys-series/net/02-dns/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;域名解析&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>jks | role</title>
       <link>https://leesirc.github.io/post/jks-series/01-role/</link>
@@ -93,16 +103,6 @@
       <guid>https://leesirc.github.io/post/go-series/go-study-third-framework/01-go-color/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;GO浪第三方库: github.com/fatih/color&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>域名解析</title>
-      <link>https://leesirc.github.io/post/sys-series/net/02-dns/</link>
-      <pubDate>Sun, 11 Oct 2020 12:00:00 +0800</pubDate>
-      
-      <guid>https://leesirc.github.io/post/sys-series/net/02-dns/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;域名解析&lt;/p&gt;</description>
     </item>
     
     <item>
