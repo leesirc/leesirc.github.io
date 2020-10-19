@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://leesirc.github.io/post/aws-series/</loc>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/tags/aws/</loc>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/categories/aws/</loc>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/aws-series/01-ebs-extend/</loc>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://leesirc.github.io/categories/</loc>
-    <lastmod>2020-10-16T12:00:00+08:00</lastmod>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://leesirc.github.io/</loc>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/</loc>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/tags/</loc>
+    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/daily-series/</loc>
     <lastmod>2020-10-16T12:00:00+08:00</lastmod>
   </url>
   
@@ -18,12 +53,22 @@
   </url>
   
   <url>
-    <loc>https://leesirc.github.io/tags/</loc>
+    <loc>https://leesirc.github.io/tags/soul/</loc>
+    <lastmod>2020-10-16T12:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/daily-series/01-soul01/</loc>
     <lastmod>2020-10-16T12:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://leesirc.github.io/post/sys-series/net/02-dns/</loc>
+    <lastmod>2020-10-16T12:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/categories/%E5%BF%83%E7%81%B5%E6%AF%92%E6%B1%A4/</loc>
     <lastmod>2020-10-16T12:00:00+08:00</lastmod>
   </url>
   
@@ -78,11 +123,6 @@
   </url>
   
   <url>
-    <loc>https://leesirc.github.io/post/</loc>
-    <lastmod>2020-10-16T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://leesirc.github.io/post/sys-series/overview/01-bpytop/</loc>
     <lastmod>2020-10-13T12:00:00+08:00</lastmod>
   </url>
@@ -128,17 +168,12 @@
   </url>
   
   <url>
-    <loc>https://leesirc.github.io/post/daily-series/</loc>
-    <lastmod>2020-10-12T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://leesirc.github.io/tags/daily/</loc>
     <lastmod>2020-10-12T09:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://leesirc.github.io/post/daily-series/01-git/</loc>
+    <loc>https://leesirc.github.io/post/sys-series/net/01-git/</loc>
     <lastmod>2020-10-12T09:00:00+08:00</lastmod>
   </url>
   
@@ -198,6 +233,10 @@
   </url>
   
   <url>
+    <loc>https://leesirc.github.io/post/info/</loc>
+  </url>
+  
+  <url>
     <loc>https://leesirc.github.io/post/aliyun-series/datalake/</loc>
   </url>
   
@@ -207,6 +246,14 @@
   
   <url>
     <loc>https://leesirc.github.io/post/go-series/go-study-third-framework/</loc>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/mq-series/rabbitmq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/mq-series/rabbitmq/info/</loc>
   </url>
   
   <url>

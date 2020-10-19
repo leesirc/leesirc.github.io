@@ -6,7 +6,27 @@
     <description>Recent content on leesirc blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2020 12:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aws | ebs</title>
+      <link>https://leesirc.github.io/post/aws-series/01-ebs-extend/</link>
+      <pubDate>Mon, 19 Oct 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/aws-series/01-ebs-extend/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;ebs简单认识&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>soul | 35周岁</title>
+      <link>https://leesirc.github.io/post/daily-series/01-soul01/</link>
+      <pubDate>Fri, 16 Oct 2020 12:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/daily-series/01-soul01/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;如何看待网传阿里巴巴蒋凡要求尽快实现P8全员35周岁以内&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>域名解析</title>
       <link>https://leesirc.github.io/post/sys-series/net/02-dns/</link>
@@ -78,10 +98,10 @@
     
     <item>
       <title>git小记</title>
-      <link>https://leesirc.github.io/post/daily-series/01-git/</link>
+      <link>https://leesirc.github.io/post/sys-series/net/01-git/</link>
       <pubDate>Mon, 12 Oct 2020 09:00:00 +0800</pubDate>
       
-      <guid>https://leesirc.github.io/post/daily-series/01-git/</guid>
+      <guid>https://leesirc.github.io/post/sys-series/net/01-git/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;GIT点点滴滴&lt;/p&gt;</description>
     </item>
@@ -132,6 +152,24 @@
       
       <guid>https://leesirc.github.io/about/</guid>
       <description>关于我 运维小白一枚 Go冲浪者 邮箱: leesirc@126.com 关于本站 记录工作点点滴滴 若有侵权, 请告知删除 建站时间: 2020-10-11 Life is short, You need Go</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://leesirc.github.io/post/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://leesirc.github.io/post/info/</guid>
+      <description>1.博客 1.pip用法 https://mp.weixin.qq.com/s/YDpO_ShK2VjlBgato8HBmg CPUThrottlingHigh https://mp.weixin.qq.com/s/EmLqZS12jbUGGVrowt0eYA https://developer.aliyun.com/article/718751 3.squid proxy ssh https://www.squins.com/knowledge/squid-http-https-ssh-proxy/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://leesirc.github.io/post/mq-series/rabbitmq/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://leesirc.github.io/post/mq-series/rabbitmq/info/</guid>
+      <description>https://juejin.im/user/1732486058222077</description>
     </item>
     
     <item>

@@ -6,6 +6,15 @@
     <description>Recent content in Posts on leesirc blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://leesirc.github.io/post/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://leesirc.github.io/post/info/</guid>
+      <description>1.博客 1.pip用法 https://mp.weixin.qq.com/s/YDpO_ShK2VjlBgato8HBmg CPUThrottlingHigh https://mp.weixin.qq.com/s/EmLqZS12jbUGGVrowt0eYA https://developer.aliyun.com/article/718751 3.squid proxy ssh https://www.squins.com/knowledge/squid-http-https-ssh-proxy/</description>
+    </item>
+    
   </channel>
 </rss>
