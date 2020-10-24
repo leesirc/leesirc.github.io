@@ -141,7 +141,7 @@
     <li><a href="#alias">alias</a></li>
     <li><a href="#try_files">try_files</a></li>
     <li><a href="#proxy_pass">proxy_pass</a></li>
-    <li><a href="#write">write</a></li>
+    <li><a href="#rewrite">rewrite</a></li>
     <li><a href="#参考链接">参考链接</a></li>
   </ul>
 </nav>
@@ -280,22 +280,33 @@ location  /mall/admin <span style="color:#f92672">{</span>
                       /data/www/mall-front/index.html
 </code></pre></div><h2 id="proxy_pass">proxy_pass</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">location / <span style="color:#f92672">{</span>
-    proxy_pass http://example.com:80/api
+    proxy_pass http://example.com:80/api/;
 <span style="color:#f92672">}</span>
 
-</code></pre></div><h2 id="write">write</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">## last</span>
+</code></pre></div><h2 id="rewrite">rewrite</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">## permanent/redirect</span>
+location /uri01 <span style="color:#f92672">{</span>
+  <span style="color:#75715e"># 浏览器地址改变</span>
+  rewrite ^/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span>$ https//ip:port/$1 permanent;
+  rewrite ^/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span>$ https://ip:port/$1 redirect;
+  rewrite ^/uri01/<span style="color:#f92672">([</span>0-9<span style="color:#f92672">]{</span>1<span style="color:#f92672">})</span>/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span>$ https://ip:port/$2 permanet;
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">## last</span>
 location /uri01 <span style="color:#f92672">{</span>
   <span style="color:#75715e"># 此时会再进入本次的server标签进行跳转</span>
+  <span style="color:#75715e"># 此时浏览器uri不变</span>
   rewrite ^/uri01/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span> /$1 last;
 <span style="color:#f92672">}</span>
 location / <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;last&#34;</span>
+  <span style="color:#66d9ef">return</span> 200;
 <span style="color:#f92672">}</span>
 
 <span style="color:#75715e">## break</span>
 location /uri01 <span style="color:#f92672">{</span>
   <span style="color:#75715e"># 此时将截断的uri直接传递到后端哦</span>
+  <span style="color:#75715e"># 此时浏览器uri不变</span>
+  <span style="color:#75715e"># break终止在本次location</span>
   rewrite ^/uri01/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span> /$1 break;
   proxy_pass http://ip:port/;
 <span style="color:#f92672">}</span>
