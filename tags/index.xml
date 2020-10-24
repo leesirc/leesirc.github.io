@@ -6,7 +6,16 @@
     <description>Recent content in Tags on leesirc blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 21 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aws</title>
+      <link>https://leesirc.github.io/tags/aws/</link>
+      <pubDate>Sat, 24 Oct 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>elk</title>
       <link>https://leesirc.github.io/tags/elk/</link>
@@ -22,15 +31,6 @@
       <pubDate>Tue, 20 Oct 2020 12:00:00 +0800</pubDate>
       
       <guid>https://leesirc.github.io/tags/soul/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>https://leesirc.github.io/tags/aws/</link>
-      <pubDate>Mon, 19 Oct 2020 09:00:00 +0800</pubDate>
-      
-      <guid>https://leesirc.github.io/tags/aws/</guid>
       <description></description>
     </item>
     

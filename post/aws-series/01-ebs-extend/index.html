@@ -227,7 +227,7 @@ lsblk
 growpart /dev/nvme0n1 <span style="color:#ae81ff">1</span>
 
 <span style="color:#75715e"># 普通ebs卷</span>
-growpart /dev/xvda <span style="color:#ae81ff">1</span>
+<span style="color:#75715e"># growpart /dev/xvda 1</span>
 
 <span style="color:#75715e"># 检验</span>
 lsblk
@@ -235,7 +235,7 @@ df -Th
 
 <span style="color:#75715e"># 扩展文件系统</span>
 <span style="color:#75715e">## xfs系统进行扩展</span>
-xfs_growfs -d /data
+<span style="color:#75715e">## xfs_growfs -d /data</span>
 
 <span style="color:#75715e">## ext4系统进行扩展</span>
 <span style="color:#75715e"># nvme&lt;0-26&gt;n1 为nvme ebs卷; 其他类型为ebs卷</span>
@@ -384,6 +384,10 @@ if (!doNotTrack) {
 <ul class="widget-list">
     
     <li>
+        <a href="https://leesirc.github.io/post/aws-series/02-landing-zone/" title="aws | landing zone">aws | landing zone</a>
+    </li>
+    
+    <li>
         <a href="https://leesirc.github.io/post/soul-series/soul/" title="soul | 为博主打CALL">soul | 为博主打CALL</a>
     </li>
     
@@ -419,10 +423,6 @@ if (!doNotTrack) {
         <a href="https://leesirc.github.io/post/aliyun-series/datalake/01-dla/" title="阿里云数据湖">阿里云数据湖</a>
     </li>
     
-    <li>
-        <a href="https://leesirc.github.io/post/go-series/go-study-notes/02-go-new-make/" title="GO浪知识点小记 | new与make">GO浪知识点小记 | new与make</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -438,7 +438,7 @@ if (!doNotTrack) {
     
     <li><a href="https://leesirc.github.io/categories/Jenkins/">Jenkins (1)</a></li>
     
-    <li><a href="https://leesirc.github.io/categories/aws/">aws (1)</a></li>
+    <li><a href="https://leesirc.github.io/categories/aws/">aws (2)</a></li>
     
     <li><a href="https://leesirc.github.io/categories/demo/">demo (1)</a></li>
     

@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://leesirc.github.io/post/aws-series/</loc>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/tags/aws/</loc>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/categories/aws/</loc>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/aws-series/02-landing-zone/</loc>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://leesirc.github.io/categories/</loc>
-    <lastmod>2020-10-21T09:00:00+08:00</lastmod>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/</loc>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/post/</loc>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leesirc.github.io/tags/</loc>
+    <lastmod>2020-10-24T09:00:00+08:00</lastmod>
   </url>
   
   <url>
@@ -19,21 +54,6 @@
   
   <url>
     <loc>https://leesirc.github.io/post/elk-series/</loc>
-    <lastmod>2020-10-21T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/</loc>
-    <lastmod>2020-10-21T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/post/</loc>
-    <lastmod>2020-10-21T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/tags/</loc>
     <lastmod>2020-10-21T09:00:00+08:00</lastmod>
   </url>
   
@@ -55,21 +75,6 @@
   <url>
     <loc>https://leesirc.github.io/categories/%E5%BF%83%E7%81%B5%E6%AF%92%E6%B1%A4/</loc>
     <lastmod>2020-10-20T12:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/post/aws-series/</loc>
-    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/tags/aws/</loc>
-    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leesirc.github.io/categories/aws/</loc>
-    <lastmod>2020-10-19T09:00:00+08:00</lastmod>
   </url>
   
   <url>
