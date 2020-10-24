@@ -141,6 +141,7 @@
     <li><a href="#alias">alias</a></li>
     <li><a href="#try_files">try_files</a></li>
     <li><a href="#proxy_pass">proxy_pass</a></li>
+    <li><a href="#write">write</a></li>
     <li><a href="#参考链接">参考链接</a></li>
   </ul>
 </nav>
@@ -204,26 +205,54 @@
         <div class="post-content">
             <!-- raw HTML omitted -->
 <p>ngx url location</p>
+<p>ngx路由截断有很多种方式</p>
+<ul>
+<li>alias</li>
+<li>rewrite</li>
+<li>proxy_pass</li>
+</ul>
 <h2 id="alias">alias</h2>
 <blockquote>
 <p>alias path 最后必须/</p>
 </blockquote>
-<p>aias 指令则会截断匹配的 uri，然后使用 alias 设定的路径加上剩余的 uri 作为子路径进行查找</p>
-<h2 id="try_files">try_files</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">一般针对root path 或者 alias path进行应用，比如前端单页应用。/login ---&gt;/index.html
-<span style="color:#75715e">## /index.html 针对的是root path</span>
+<ul>
+<li>alias 指令则会截断匹配的 uri，然后使用 alias 设定的路径加上剩余的 uri 作为子路径进行查找</li>
+<li>root 指令不会截断匹配的uri</li>
+<li>应用</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 一般静态网站没有特殊的匹配请求时, root和alias都适用</span>
+<span style="color:#75715e"># 前端单页应用一般都会配合root/alias和try_files进行适用, 如果uri需要截取就用alias, 否则就用root</span>
+location /front01 <span style="color:#f92672">{</span>
+  root /data/www/;
+  index index.html index.htm;
+<span style="color:#f92672">}</span>
+
+location /front01 <span style="color:#f92672">{</span>
+  alias /data/www/front01;
+  index index.html index.htm;
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="try_files">try_files</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 一般配合root path 或者 alias path进行应用，比如前端单页应用。/login ---&gt;/index.html</span>
+<span style="color:#75715e"># /index.html 针对的是root path</span>
 try_files $uri $uri/ /index.html;
 index index.html index.htm;
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root /data/leesirc;
+</code></pre></div><ul>
+<li>demo01</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 需求如下</span>
+/a/uri/ ---&gt; /data/web/uri
+              /data/web/uri/index.html
+              /data/leesirc/index.html
+
+
+root /data/leesirc;
 location /a <span style="color:#f92672">{</span> 
   alias /data/web/;
   try_files $uri $uri/ /index.html;
   index index.html index.htm;
 <span style="color:#f92672">}</span>
 
-/a/uri/ ---&gt; /data/web/uri
-              /data/web/uri/index.html
-              /data/leesirc/index.html
+
 
 
 location /b <span style="color:#f92672">{</span> 
@@ -238,17 +267,48 @@ location /b <span style="color:#f92672">{</span>
               /data/web/b/index.html
 <span style="color:#75715e"># ps: /index.html 是root path</span>
 
+
+<span style="color:#75715e"># 单页应用</span>
+location  /mall/admin <span style="color:#f92672">{</span>
+    alias /data/www/mall-front/;
+    try_files $uri  $uri/ /mall/admin/index.html;
+    index index.html index.htm;
+<span style="color:#f92672">}</span>
+
+/mall/admin/login ---&gt; /data/www/mall-front/login
+                      /data/www/mall-front/login/index.html
+                      /data/www/mall-front/index.html
 </code></pre></div><h2 id="proxy_pass">proxy_pass</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">location / <span style="color:#f92672">{</span>
     proxy_pass http://example.com:80/api
 <span style="color:#f92672">}</span>
 
+</code></pre></div><h2 id="write">write</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">## last</span>
+location /uri01 <span style="color:#f92672">{</span>
+  <span style="color:#75715e"># 此时会再进入本次的server标签进行跳转</span>
+  rewrite ^/uri01/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span> /$1 last;
+<span style="color:#f92672">}</span>
+location / <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;last&#34;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">## break</span>
+location /uri01 <span style="color:#f92672">{</span>
+  <span style="color:#75715e"># 此时将截断的uri直接传递到后端哦</span>
+  rewrite ^/uri01/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span> /$1 break;
+  proxy_pass http://ip:port/;
+<span style="color:#f92672">}</span>
 </code></pre></div><ul>
 <li>总结</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1. 只要proxy_pass server后有/, 不管是/api/xxx还是/api, 都会截断uri
-2. 使用proxy_pass 方式截取都uri, 浏览器不变
-3. 使用proxy_pass 方式都会将location 匹配到到前缀进行替换掉
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1.alias适用于前端网站
+2.rewrite功能太强大, 尤其是后面的四个标签permanent/redirect/last/break, 前者是301/302, last会再入server标签, break会终止在本location里
+3.proxy_pass适用于后端uri截取
+
+4. 只要proxy_pass server后有/, 不管是/api/xxx还是/api, 都会截断uri
+5. 使用proxy_pass 方式截取的uri, 浏览器不变
+6. 使用proxy_pass 方式都会将location 匹配到到前缀进行替换掉
 </code></pre></div><h2 id="参考链接">参考链接</h2>
 <ul>
 <li><a href="https://www.jianshu.com/p/849a6c068daa">https://www.jianshu.com/p/849a6c068daa</a></li>
@@ -445,6 +505,8 @@ if (!doNotTrack) {
     
     <li><a href="https://leesirc.github.io/categories/demo/">demo (1)</a></li>
     
+    <li><a href="https://leesirc.github.io/categories/elk/">elk (1)</a></li>
+    
     <li><a href="https://leesirc.github.io/categories/ngx/">ngx (2)</a></li>
     
     <li><a href="https://leesirc.github.io/categories/%E5%BF%83%E7%81%B5%E6%AF%92%E6%B1%A4/">心灵毒汤 (2)</a></li>
@@ -471,6 +533,8 @@ if (!doNotTrack) {
     <a href="https://leesirc.github.io/tags/daily/">daily</a>
     
     <a href="https://leesirc.github.io/tags/demo/">demo</a>
+    
+    <a href="https://leesirc.github.io/tags/elk/">elk</a>
     
     <a href="https://leesirc.github.io/tags/golang-notes/">golang-notes</a>
     

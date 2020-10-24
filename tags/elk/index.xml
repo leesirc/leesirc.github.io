@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elk on leesirc blog</title>
+    <link>https://leesirc.github.io/tags/elk/</link>
+    <description>Recent content in elk on leesirc blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 21 Oct 2020 09:00:00 +0800</lastBuildDate><atom:link href="https://leesirc.github.io/tags/elk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>elk 杂记</title>
+      <link>https://leesirc.github.io/post/elk-series/</link>
+      <pubDate>Wed, 21 Oct 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://leesirc.github.io/post/elk-series/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;elk | kibana-权限&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

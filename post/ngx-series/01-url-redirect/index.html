@@ -203,6 +203,10 @@
             <!-- raw HTML omitted -->
 <p>ngx url重定向实践</p>
 <p>路由跳转有好几种方式实现</p>
+<ul>
+<li>return</li>
+<li>rewrite</li>
+</ul>
 <h2 id="rewrite">rewrite</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">server <span style="color:#f92672">{</span>
     listen       80;
@@ -216,6 +220,12 @@ server <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">return</span>       <span style="color:#ae81ff">301</span> https://www.example.com$request_uri;
 
     ...
+<span style="color:#f92672">}</span>
+
+server <span style="color:#f92672">{</span>
+    listen 80;
+    server_name example.com;
+    rewrite <span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span>$ https://$host$1 permanent;
 <span style="color:#f92672">}</span>
 
 server <span style="color:#f92672">{</span>
@@ -423,6 +433,8 @@ if (!doNotTrack) {
     
     <li><a href="https://leesirc.github.io/categories/demo/">demo (1)</a></li>
     
+    <li><a href="https://leesirc.github.io/categories/elk/">elk (1)</a></li>
+    
     <li><a href="https://leesirc.github.io/categories/ngx/">ngx (2)</a></li>
     
     <li><a href="https://leesirc.github.io/categories/%E5%BF%83%E7%81%B5%E6%AF%92%E6%B1%A4/">心灵毒汤 (2)</a></li>
@@ -449,6 +461,8 @@ if (!doNotTrack) {
     <a href="https://leesirc.github.io/tags/daily/">daily</a>
     
     <a href="https://leesirc.github.io/tags/demo/">demo</a>
+    
+    <a href="https://leesirc.github.io/tags/elk/">elk</a>
     
     <a href="https://leesirc.github.io/tags/golang-notes/">golang-notes</a>
     
